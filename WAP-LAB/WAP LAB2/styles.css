@@ -1,0 +1,155 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(155, 154, 154) !important;
+    display: grid;
+    gap: 1rem;
+    grid-template-areas: 
+        "header"
+        "section"
+        "footer"
+    ;
+}
+
+header, section, aside, footer{
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header{
+    grid-area: header;
+    height: 4rem;
+}
+
+section{
+    grid-area: section;
+    min-height: 34rem;
+    justify-content: start;   
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2% 0 0 0;
+}
+
+aside{
+    grid-area: aside;
+}
+
+footer{
+    grid-area: footer;
+    height: 5rem;
+}
+
+main{
+    display: contents;
+}
+
+.container_note{
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    flex-direction: column;
+}
+
+#container_add_note{
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    align-items: center;
+    justify-content: center;
+}
+
+#btn_add_note{
+    width: 20%;
+    border-radius: 0.5rem;
+    border: none;
+    background-color: blueviolet;
+    color: white;
+    padding: 1rem;
+}
+
+#txt_add_note{
+    width: 100%;
+    border-radius: 0.5rem;
+    border: 2px solid rgb(183, 183, 183);
+    padding: 1rem;
+}
+
+.container_new_note{
+    width: 100%;
+    display: grid;
+    padding: 0rem 0rem 0rem 1rem;
+    grid-template-areas: 
+        'checkbox note_name_display  btn_delete'
+    ;
+   
+    grid-template-columns: 1fr 6fr 1fr;
+    border: 2px solid rgb(183, 183, 183);
+    border-radius: 0.5rem;
+    align-items: center;
+}
+
+.note_description{
+    grid-area: des;
+    border: 1px solid rgb(183, 183, 183);
+    width: 100%;
+    min-height: 6rem;
+    border-radius: 0.5rem;
+    display: none;
+}
+
+.container_new_note button{
+    padding: 0.8rem;
+    border: none;
+}
+
+.checkbox{
+    grid-area: checkbox;
+    height: 2rem;
+}
+
+.note_name_display{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: note_name_display;
+}
+
+
+.btn_delete{
+    background-color: red;
+    color: white;
+    grid-area: btn_delete;
+}
+
+button:hover{
+    opacity: 0.4;
+}
+
+.notes{
+    width: 100%;
+}
+
+@media (max-width: 700px){
+    .container_note{
+        width: 95%;
+    }
+
+    #container_add_note{
+        flex-direction: column;
+    }
+
+    #btn_add_note{
+        width: 40%;
+    }
+
+    #btn_delete{
+        display: none;
+    }
+}

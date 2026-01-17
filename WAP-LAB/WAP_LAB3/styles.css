@@ -1,0 +1,100 @@
+body{
+    background-color: rgb(150, 150, 150);
+    display: grid;
+    gap: 1rem;
+    grid-template-areas: 
+        "header"
+        "section"
+        "footer"
+    ;
+}
+
+header, footer, section{
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header{
+    grid-area: header;
+}
+
+footer{
+    grid-area: footer;
+}
+
+section{
+    grid-area: section;
+    flex-direction: column;
+    min-height: 70rem;
+    justify-content: start;
+}
+
+#login_form{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    font-size: 2rem;
+    width: 50%;
+}
+
+#login_form input{
+    font-size: 1.5rem;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    width: 95%;
+    border: 2px solid rgb(152, 151, 151);
+}
+
+.input_box{
+    display: flex;
+}   
+
+ul{
+    margin-top: 0.5rem;
+    position: absolute;
+    list-style: none;
+    padding: 0;
+    max-height: 20rem; /* Set desired height */
+    overflow-y: auto;  /* Add vertical scrollbar when needed */
+    display: none;
+    flex-direction: column;
+    width: 15rem;
+    background-color: white;
+    border: 1px solid rgb(194, 194, 194);
+    z-index: 1000;
+}
+
+li{
+    border: 1px solid rgb(194, 194, 194);
+    font-size: 1.5rem;
+    padding: 0.5rem;
+}
+
+li:hover{
+    cursor: pointer;
+    background-color: rgb(200, 197, 197);
+}
+
+#select_country{
+    width: 15rem;
+    font-size: 1.5rem;  
+    padding: 1rem;
+}
+
+#countryList img {
+    width: 20px;   /* smaller width */
+    height: 14px;  /* smaller height */
+}
+
+#display_country{
+    text-align: center;
+}
+
+#submit, #upload{
+    padding: 1rem;
+    font-size: 1.5rem;
+}
+
+

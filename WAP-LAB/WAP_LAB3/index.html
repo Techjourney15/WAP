@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        h2{
+            font-size: 3rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>User login form</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>Enter details</h2>
+            <form id="login_form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" placeholder="@Yourname">
+            
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="@Youremail">
+            
+                <label for="password">Password:</label>
+                <input type="password" id="password" placeholder="*************">
+            
+                <div style="display:flex; gap: 2rem; align-items: flex-start;">
+                    <label>Select Country</label>
+                    <div style="display: flex; flex-direction: column; position: relative;">
+                        <button type="button" id="select_country">Select country \/</button>
+                        <ul id="countryList">
+
+                        </ul>
+                    </div>
+                    <input type="text" id="display_country" readonly>
+                </div>
+                <div style="display:flex; gap: 2rem; align-items: flex-start;">
+                    <label>Upload document</label>
+                    <input type="file" id="upload">
+                </div>
+                <button type="submit" id="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <h2>Copyright@2025 HCOE Anshu</h2>
+    </footer>
+    <!-- jQuery library -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="scripts.js"></script>
+   
+</body>
+</html>
