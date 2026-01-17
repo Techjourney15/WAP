@@ -6,17 +6,14 @@ export default function Api() {
   useEffect(() => {
     fetch("https://jsonplaceholder.typicode.com/posts")
       .then(res => res.json())
-      .then(data => setPosts(data.slice(0, 5)));
+      .then(data => setPosts());
   }, []);
 
   return (
     <div>
-      <h2>API Posts</h2>
+     
       {posts.map(post => (
-        <div key={post.id}>
-          <h3>{post.title}</h3>
-          <p>{post.body}</p>
-        </div>
+        <p key={post.id}>{post.title}</p>
       ))}
     </div>
   );
