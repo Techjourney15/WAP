@@ -1,33 +1,25 @@
-body {
-    background-color: #f4f6f8;   /* custom CSS */
-    font-family: Arial, Helvetica, sans-serif; /* custom CSS */
-    font-size: 18px;
+section{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 50%;
 }
 
-.calculator {
-    width: 300px;
-    margin: 100px auto;
-    padding: 20px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    text-align: center;
+.btn{
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    flex-grow: 1.0; /*show result box grows*/
 }
 
-input {
-    width: 90%;
-    padding: 8px;
-    margin: 8px 0;
+.num_disp{
+    display: flex;
+    padding: 1rem;
+    text-align: center; /*The inputed value is justified to center*/
+    font-size: 1.5rem;
+    min-width: 0;
 }
 
-.buttons button {
-    padding: 8px 12px;
-    margin: 5px;
-    cursor: pointer;
+.row1, .row2, .row3{
+    display: flex;
+    gap: 1rem;
 }
-
-#result {
-    font-weight: bold;
-    margin-top: 15px;
-}
-

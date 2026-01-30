@@ -1,14 +1,14 @@
 import { funcAdd, funcSub, funcMul, funcDiv } from "./calculator.js";
 
 $(document).ready(function () {
+    let selectedOperation = "";
 
     function calculate(operation) {
-
-        let n1 = parseFloat($("#num1").val());
-        let n2 = parseFloat($("#num2").val());
+        const n1 = parseFloat($("#num1").val());
+        const n2 = parseFloat($("#num2").val());
 
         if (isNaN(n1) || isNaN(n2)) {
-            $("#result").text("Result: Please enter valid numbers");
+            $("#result").val("Please enter valid numbers");
             return;
         }
 
@@ -18,45 +18,48 @@ $(document).ready(function () {
             case "add":
                 result = funcAdd(n1, n2);
                 break;
-
             case "sub":
                 result = funcSub(n1, n2);
                 break;
-
             case "mul":
                 result = funcMul(n1, n2);
                 break;
-
             case "div":
                 if (n2 === 0) {
-                    $("#result").text("Result: Cannot divide by zero");
+                    $("#result").val("Cannot divide by zero");
                     return;
                 }
                 result = funcDiv(n1, n2);
                 break;
-
             default:
-                $("#result").text("Result: Invalid operation");
+                $("#result").val("Select an operator first");
                 return;
         }
 
-        $("#result").text("Result: " + result);
+        $("#result").val(result);
     }
 
-    $("#add").click(function () {
-        calculate("add");
+    $("#btn_add").click(function () {
+        selectedOperation = "add";
+        $("#symbol").val("+");
     });
 
-    $("#sub").click(function () {
-        calculate("sub");
+    $("#btn_sub").click(function () {
+        selectedOperation = "sub";
+        $("#symbol").val("-");
     });
 
-    $("#mul").click(function () {
-        calculate("mul");
+    $("#btn_mul").click(function () {
+        selectedOperation = "mul";
+        $("#symbol").val("×");
     });
 
-    $("#div").click(function () {
-        calculate("div");
+    $("#btn_div").click(function () {
+        selectedOperation = "div";
+        $("#symbol").val("÷");
     });
 
+    $("#btn_res").click(function () {
+        calculate(selectedOperation);
+    });
 });
