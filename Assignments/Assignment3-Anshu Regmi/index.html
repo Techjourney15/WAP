@@ -3,12 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculator</title>
-</head>
-<body>
-    <h1>Simple Arithmetic Calculator</h1>
-    
+
+    <title>Simple Calculator</title>
+
+    <link rel="stylesheet" href="styles.css">
 
     
+</head>
+<body>
+
+    <div class="calculator">
+        <h2>Simple Calculator</h2>
+
+        <input type="number" id="num1" placeholder="Enter first number">
+        <input type="number" id="num2" placeholder="Enter second number">
+
+        <div class="buttons">
+            <button id="add">Add</button>
+            <button id="sub">Subtract</button>
+            <button id="mul">Multiply</button>
+            <button id="div">Divide</button>
+        </div>
+
+        <p id="result">Result: </p>
+    </div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="module" src="scripts.js"></script>
 </body>
 </html>
